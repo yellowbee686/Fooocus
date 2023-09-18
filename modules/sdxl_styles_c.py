@@ -206,5 +206,398 @@ styles = [
         "c_prompt": "零售包装风格 {prompt} . 充满活力，诱人，商业，以产品为中心，引人注目，专业，高度详细",
         "negative_prompt": "noisy, blurry, amateurish, sloppy, unattractive",
         "c_negative_prompt": "嘈杂，模糊，业余，马虎，不吸引人"
+    },
+    {
+        "name": "artstyle-abstract",
+        "c_name": "抽象风格",
+        "prompt": "抽象风格 {prompt} . 非具象，色彩和形状，表达感情，富有想象力，高度详细",
+        "c_prompt": "非具象，色彩和形状，表达感情，富有想象力，高度详细",
+        "negative_prompt": "具象，摄影写实，具象化，具体"
+    },
+    {
+        "name": "artstyle-abstract expressionism",
+        "c_name": "抽象表现主义",
+        "prompt": "抽象表现主义绘画 {prompt} . 充满活力的笔触，大胆的色彩，抽象形式，富有表现力，情感丰富",
+        "c_prompt": "充满活力的笔触，大胆的色彩，抽象形式，富有表现力，情感丰富",
+        "negative_prompt": "具象，摄影写实，低对比度，朴素，简单，单色"
+    },
+    {
+        "name": "artstyle-art deco",
+        "c_name": "装饰艺术风格",
+        "prompt": "装饰艺术风格 {prompt} . 几何形状，大胆的色彩，豪华，优雅，装饰性，对称，华丽，详细",
+        "c_prompt": "几何形状，大胆的色彩，豪华，优雅，装饰性，对称，华丽，详细",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实，现代主义，极简主义"
+    },
+    {
+        "name": "artstyle-art nouveau",
+        "c_name": "新艺术风格",
+        "prompt": "新艺术风格 {prompt} . 优雅，装饰性，弯曲的形式，受自然启发，华丽，详细",
+        "c_prompt": "优雅，装饰性，弯曲的形式，受自然启发，华丽，详细",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实，现代主义，极简主义"
+    },
+    {
+        "name": "artstyle-constructivist",
+        "c_name": "构成主义风格",
+        "prompt": "构成主义风格 {prompt} . 几何形状，大胆的色彩，动态构图，宣传艺术风格",
+        "c_prompt": "几何形状，大胆的色彩，动态构图，宣传艺术风格",
+        "negative_prompt": "具象，摄影写实，低对比度，朴素，简单，抽象表现主义"
+    },
+    {
+        "name": "artstyle-cubist",
+        "c_name": "立体派艺术",
+        "prompt": "立体派艺术 {prompt} . 几何形状，抽象，创新，革命性",
+        "c_prompt": "几何形状，抽象，创新，革命性",
+        "negative_prompt": "动画，摄影写实，35毫米胶片，变形，故障，低对比度，嘈杂"
+    },
+    {
+        "name": "artstyle-expressionist",
+        "c_name": "表现主义",
+        "prompt": "表现主义 {prompt} . 原始，情感丰富，动态，扭曲以产生情感效果，充满活力，使用不寻常的色彩，详细",
+        "c_prompt": "原始，情感丰富，动态，扭曲以产生情感效果，充满活力，使用不寻常的色彩，详细",
+        "negative_prompt": "具象，对称，宁静，平静，照片"
+    },
+    {
+        "name": "artstyle-graffiti",
+        "c_name": "涂鸦艺术",
+        "prompt": "涂鸦风格 {prompt} . 街头艺术，充满活力，都市风，详细，标签，壁画",
+        "c_prompt": "街头艺术，充满活力，都市风，详细，标签，壁画",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实"
+    },
+    {
+        "name": "artstyle-hyperrealism",
+        "c_name": "超现实主义",
+        "prompt": "超写实艺术 {prompt} . 极高分辨率的细节，摄影写实，写实主义推向极致，细腻的纹理，令人难以置信的栩栩如生",
+        "c_prompt": "极高分辨率的细节，摄影写实，写实主义推向极致，细腻的纹理，令人难以置信的栩栩如生",
+        "negative_prompt": "简化，抽象，不真实，印象派，低分辨率"
+    },
+    {
+        "name": "artstyle-impressionist",
+        "c_name": "印象派绘画",
+        "prompt": "印象派绘画 {prompt} . 松散的笔触，生动的色彩，光影变化，更强调情感",
+        "c_prompt": "松散的笔触，生动的色彩，光影变化，更强调情感",
+        "negative_prompt": "动画，摄影写实，35毫米胶片，变形，故障，低对比度，嘈杂"
+    },
+    {
+        "name": "artstyle-pointillism",
+        "c_name": "点彩派风格",
+        "prompt": "点彩派风格 {prompt} . 由小而明显的色点组成，充满活力，高度详细",
+        "c_prompt": "线条绘画，平滑阴影，大块色彩区域，简化",
+        "negative_prompt": "线条绘画，平滑阴影，大块色彩区域，简化"
+    },
+    {
+        "name": "artstyle-pop art",
+        "c_name": "波普艺术",
+        "prompt": "波普艺术风格 {prompt} . 鲜艳的色彩，大胆的轮廓，流行文化主题，讽刺或庸俗",
+        "c_prompt": "鲜艳的色彩，大胆的轮廓，流行文化主题，讽刺或庸俗",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实，极简主义"
+    },
+    {
+        "name": "artstyle-psychedelic",
+        "c_name": "迷幻风格",
+        "prompt": "迷幻风格 {prompt} . 充满活力的色彩，旋转的图案，抽象形式，超现实，令人迷幻",
+        "c_prompt": "充满活力的色彩，旋转的图案，抽象形式，超现实，令人迷幻",
+        "negative_prompt": "单色，黑白，低对比度，写实，摄影写实，朴素，简单"
+    },
+    {
+        "name": "artstyle-renaissance",
+        "c_name": "文艺复兴风格",
+        "prompt": "文艺复兴风格 {prompt} . 写实，透视，光影，宗教或神话主题，高度详细",
+        "c_prompt": "写实，透视，光影，宗教或神话主题，高度详细",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，现代主义，极简主义，抽象"
+    },
+    {
+        "name": "artstyle-steampunk",
+        "c_name": "蒸汽朋克风格",
+        "prompt": "蒸汽朋克风格 {prompt} . 古董，机械，黄铜和铜色调，齿轮，复杂，详细",
+        "c_prompt": "古董，机械，黄铜和铜色调，齿轮，复杂，详细",
+        "negative_prompt": "变形，故障，嘈杂，低对比度，动画，摄影写实"
+    },
+    {
+        "name": "artstyle-surrealist",
+        "c_name": "超现实主义艺术",
+        "prompt": "超现实主义艺术 {prompt} . 梦幻般，神秘，富有启发性，象征性，复杂，详细",
+        "c_prompt": "梦幻般，神秘，富有启发性，象征性，复杂，详细",
+        "negative_prompt": "动画，摄影写实，写实，变形，故障，嘈杂，低对比度"
+    },
+    {
+        "name": "artstyle-typography",
+        "c_name": "排版艺术",
+        "prompt": "排版艺术 {prompt} . 风格化，复杂，详细，艺术性，基于文本",
+        "c_prompt": "风格化，复杂，详细，艺术性，基于文本",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实"
+    },
+    {
+        "name": "artstyle-watercolor",
+        "c_name": "水彩绘画",
+        "prompt": "水彩绘画 {prompt} . 充满活力，美丽，绘画感，详细，质感，艺术性",
+        "c_prompt": "充满活力，美丽，绘画感，详细，质感，艺术性",
+        "negative_prompt": "动画，摄影写实，35毫米胶片，变形，故障，低对比度，嘈杂"
+    },
+    {
+        "name": "futuristic-biomechanical",
+        "c_name": "未来主义生物机械",
+        "prompt": "生物机械风格 {prompt} . 有机和机械元素的融合，未来主义，赛博网，详细，复杂",
+        "c_prompt": "有机和机械元素的融合，未来主义，赛博网，详细，复杂",
+        "negative_prompt": "自然，乡村，原始，有机，简单"
+    },
+    {
+        "name": "futuristic-biomechanical cyberpunk",
+        "c_name": "生物机械赛博朋克",
+        "prompt": "生物机械赛博朋克 {prompt} . 赛博网，人机融合，末世主题，有机与人工相遇，黑暗，复杂，高度详细",
+        "c_prompt": "赛博网，人机融合，末世主题，有机与人工相遇，黑暗，复杂，高度详细",
+        "negative_prompt": "自然，丰富多彩，变形，素描，低对比度，水彩"
+    },
+    {
+        "name": "futuristic-cybernetic",
+        "c_name": "赛博风格",
+        "prompt": "赛博风格 {prompt} . 未来主义，技术，赛博增强，机器人，人工智能主题",
+        "c_prompt": "未来主义，技术，赛博增强，机器人，人工智能主题",
+        "negative_prompt": "丑陋，变形，嘈杂，模糊，低对比度，写实，摄影写实，历史，中世纪"
+    },
+    {
+        "name": "futuristic-cybernetic robot",
+        "c_name": "赛博机器人",
+        "prompt": "赛博机器人 {prompt} . 人工智能，机器，金属，电线，科技，未来主义，高度详细",
+        "c_prompt": "人工智能，机器，金属，电线，科技，未来主义，高度详细",
+        "negative_prompt": "有机，自然，人类，素描，水彩，低对比度"
+    },
+    {
+        "name": "futuristic-cyberpunk cityscape",
+        "c_name": "赛博朋克城市景观",
+        "prompt": "赛博朋克城市景观 {prompt} . 霓虹灯，黑暗小巷，摩天大楼，未来主义，鲜艳的色彩，高对比度，高度详细",
+        "c_prompt": "霓虹灯，黑暗小巷，摩天大楼，未来主义，鲜艳的色彩，高对比度，高度详细",
+        "negative_prompt": "自然，乡村，变形，低对比度，黑白，素描，水彩"
+    },
+    {
+        "name": "futuristic-futuristic",
+        "c_name": "未来主义-未来主义",
+        "prompt": "未来主义风格 {prompt} . 时尚、现代、超现代、高科技、细节丰富",
+        "c_prompt": "未来主义风格 {c_prompt} . 时尚、现代、超现代、高科技、细节丰富",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、复古、古董",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、复古、古董"
+    },
+    {
+        "name": "futuristic-retro cyberpunk",
+        "c_name": "未来主义-复古赛博朋克",
+        "prompt": "复古赛博朋克 {prompt} . 80年代启发、合成波、霓虹、充满活力、细节丰富、复古未来主义",
+        "c_prompt": "复古赛博朋克 {c_prompt} . 80年代启发、合成波、霓虹、充满活力、细节丰富、复古未来主义",
+        "negative_prompt": "现代、去饱和、黑白、写实、低对比度",
+        "c_negative_prompt": "现代、去饱和、黑白、写实、低对比度"
+    },
+    {
+        "name": "futuristic-retro futurism",
+        "c_name": "未来主义-复古未来主义",
+        "prompt": "复古未来主义 {prompt} . 复古科幻、50年代和60年代风格、原子时代、充满活力、高度详细",
+        "c_prompt": "复古未来主义 {c_prompt} . 复古科幻、50年代和60年代风格、原子时代、充满活力、高度详细",
+        "negative_prompt": "现代、写实、乡村、原始",
+        "c_negative_prompt": "现代、写实、乡村、原始"
+    },
+    {
+        "name": "futuristic-sci-fi",
+        "c_name": "未来主义-科幻",
+        "prompt": "科幻风格 {prompt} . 未来主义、技术、外星世界、太空主题、先进文明",
+        "c_prompt": "科幻风格 {c_prompt} . 未来主义、技术、外星世界、太空主题、先进文明",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、历史、中世纪",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、历史、中世纪"
+    },
+    {
+        "name": "futuristic-vaporwave",
+        "c_name": "未来主义-蒸汽波",
+        "prompt": "蒸汽波风格 {prompt} . 复古美学、赛博朋克、霓虹色彩、80年代和90年代复古风格、高度详细",
+        "c_prompt": "蒸汽波风格 {c_prompt} . 复古美学、赛博朋克、霓虹色彩、80年代和90年代复古风格、高度详细",
+        "negative_prompt": "单色、柔和色彩、写实、乡村、极简、黑暗",
+        "c_negative_prompt": "单色、柔和色彩、写实、乡村、极简、黑暗"
+    },
+    {
+        "name": "game-bubble bobble",
+        "c_name": "游戏-泡泡龙",
+        "prompt": "泡泡龙风格 {prompt} . 8位元、可爱、像素化、幻想、充满活力、让人联想到泡泡龙游戏",
+        "c_prompt": "泡泡龙风格 {c_prompt} . 8位元、可爱、像素化、幻想、充满活力、让人联想到泡泡龙游戏",
+        "negative_prompt": "写实、现代、逼真、暴力、恐怖",
+        "c_negative_prompt": "写实、现代、逼真、暴力、恐怖"
+    },
+    {
+        "name": "game-cyberpunk game",
+        "c_name": "游戏-赛博朋克游戏",
+        "prompt": "赛博朋克游戏风格 {prompt} . 霓虹、反乌托邦、未来主义、数字化、充满活力、详细、高对比度、让人联想到赛博朋克风格的电子游戏",
+        "c_prompt": "赛博朋克游戏风格 {c_prompt} . 霓虹、反乌托邦、未来主义、数字化、充满活力、详细、高对比度、让人联想到赛博朋克风格的电子游戏",
+        "negative_prompt": "历史、自然、乡村、低详细度",
+        "c_negative_prompt": "历史、自然、乡村、低详细度"
+    },
+    {
+        "name": "game-fighting game",
+        "c_name": "游戏-格斗游戏",
+        "prompt": "格斗游戏风格 {prompt} . 动感、充满活力、动作紧凑、详细的角色设计、让人联想到格斗类电子游戏",
+        "c_prompt": "格斗游戏风格 {c_prompt} . 动感、充满活力、动作紧凑、详细的角色设计、让人联想到格斗类电子游戏",
+        "negative_prompt": "宁静、平和、极简、逼真",
+        "c_negative_prompt": "宁静、平和、极简、逼真"
+    },
+    {
+        "name": "game-gta",
+        "c_name": "游戏-GTA",
+        "prompt": "GTA风格艺术 {prompt} . 讽刺、夸张、波普艺术风格、充满活力的色彩、标志性角色、充满动作",
+        "c_prompt": "GTA风格艺术 {c_prompt} . 讽刺、夸张、波普艺术风格、充满活力的色彩、标志性角色、充满动作",
+        "negative_prompt": "现实主义、黑白、低对比度、印象派、立体派、嘈杂、模糊、畸形",
+        "c_negative_prompt": "现实主义、黑白、低对比度、印象派、立体派、嘈杂、模糊、畸形"
+    },
+    {
+        "name": "game-mario",
+        "c_name": "游戏-马里奥",
+        "prompt": "超级马里奥风格 {prompt} . 充满活力、可爱、卡通、幻想、俏皮、让人联想到超级马里奥系列",
+        "c_prompt": "超级马里奥风格 {c_prompt} . 充满活力、可爱、卡通、幻想、俏皮、让人联想到超级马里奥系列",
+        "negative_prompt": "写实、现代、恐怖、反乌托邦、暴力",
+        "c_negative_prompt": "写实、现代、恐怖、反乌托邦、暴力"
+    },
+    {
+        "name": "game-minecraft",
+        "c_name": "游戏-我的世界",
+        "prompt": "我的世界风格 {prompt} . 方块、像素化、充满活力的色彩、可识别的角色和物体、游戏资源",
+        "c_prompt": "我的世界风格 {c_prompt} . 方块、像素化、充满活力的色彩、可识别的角色和物体、游戏资源",
+        "negative_prompt": "光滑、现实主义、详细、逼真、噪音、模糊、畸形",
+        "c_negative_prompt": "光滑、现实主义、详细、逼真、噪音、模糊、畸形"
+    },
+    {
+        "name": "game-pokemon",
+        "c_name": "游戏-精灵宝可梦",
+        "prompt": "精灵宝可梦风格 {prompt} . 充满活力、可爱、动画、幻想、让人联想到精灵宝可梦系列",
+        "c_prompt": "精灵宝可梦风格 {c_prompt} . 充满活力、可爱、动画、幻想、让人联想到精灵宝可梦系列",
+        "negative_prompt": "写实、现代、恐怖、反乌托邦、暴力",
+        "c_negative_prompt": "写实、现代、恐怖、反乌托邦、暴力"
+    },
+    {
+        "name": "game-retro arcade",
+        "c_name": "游戏-复古街机",
+        "prompt": "复古街机风格 {prompt} . 8位元、像素化、充满活力、经典电子游戏、老派游戏、让人联想到80年代和90年代的街机游戏",
+        "c_prompt": "复古街机风格 {c_prompt} . 8位元、像素化、充满活力、经典电子游戏、老派游戏、让人联想到80年代和90年代的街机游戏",
+        "negative_prompt": "现代、超高分辨率、逼真、3D",
+        "c_negative_prompt": "现代、超高分辨率、逼真、3D"
+    },
+    {
+        "name": "game-retro game",
+        "c_name": "游戏-复古游戏艺术",
+        "prompt": "复古游戏艺术 {prompt} . 16位元、充满活力的色彩、像素化、怀旧、迷人、有趣",
+        "c_prompt": "复古游戏艺术 {c_prompt} . 16位元、充满活力的色彩、像素化、怀旧、迷人、有趣",
+        "negative_prompt": "写实、逼真、35mm电影、畸形、故障、低对比度、嘈杂",
+        "c_negative_prompt": "写实、逼真、35mm电影、畸形、故障、低对比度、嘈杂"
+    },
+    {
+        "name": "game-rpg fantasy game",
+        "c_name": "游戏-角色扮演幻想游戏",
+        "prompt": "角色扮演游戏（RPG）风格幻想 {prompt} . 详细、充满活力、沉浸式、让人联想到高幻想RPG游戏",
+        "c_prompt": "角色扮演游戏（RPG）风格幻想 {c_prompt} . 详细、充满活力、沉浸式、让人联想到高幻想RPG游戏",
+        "negative_prompt": "科幻、现代、城市、未来主义、低详细度",
+        "c_negative_prompt": "科幻、现代、城市、未来主义、低详细度"
+    },
+    {
+        "name": "game-strategy game",
+        "c_name": "游戏-策略游戏",
+        "prompt": "策略游戏风格 {prompt} . 俯视视角、详细地图、单位、让人联想到实时战略电子游戏",
+        "c_prompt": "策略游戏风格 {c_prompt} . 俯视视角、详细地图、单位、让人联想到实时战略电子游戏",
+        "negative_prompt": "第一人称视角、现代、逼真",
+        "c_negative_prompt": "第一人称视角、现代、逼真"
+    },
+    {
+        "name": "game-streetfighter",
+        "c_name": "游戏-街头霸王",
+        "prompt": "街头霸王风格 {prompt} . 充满活力、动感、街机、2D格斗游戏、高度详细、让人联想到街头霸王系列",
+        "c_prompt": "街头霸王风格 {c_prompt} . 充满活力、动感、街机、2D格斗游戏、高度详细、让人联想到街头霸王系列",
+        "negative_prompt": "3D、逼真、现代、逼真、回合制策略",
+        "c_negative_prompt": "3D、逼真、现代、逼真、回合制策略"
+    },
+    {
+        "name": "game-zelda",
+        "c_name": "游戏-塞尔达传说",
+        "prompt": "塞尔达传说风格 {prompt} . 充满活力、幻想、详细、史诗、英勇、让人联想到塞尔达传说系列",
+        "c_prompt": "塞尔达传说风格 {c_prompt} . 充满活力、幻想、详细、史诗、英勇、让人联想到塞尔达传说系列",
+        "negative_prompt": "科幻、现代、现实主义、恐怖",
+        "c_negative_prompt": "科幻、现代、现实主义、恐怖"
+    },
+    {
+        "name": "misc-architectural",
+        "c_name": "杂项-建筑",
+        "prompt": "建筑风格 {prompt} . 清晰的线条、几何形状、极简主义、现代、建筑绘图、高度详细",
+        "c_prompt": "建筑风格 {c_prompt} . 清晰的线条、几何形状、极简主义、现代、建筑绘图、高度详细",
+        "negative_prompt": "曲线线条、华丽、巴洛克、抽象、破旧",
+        "c_negative_prompt": "曲线线条、华丽、巴洛克、抽象、破旧"
+    },
+    {
+        "name": "misc-disco",
+        "c_name": "杂项-迪斯科",
+        "prompt": "迪斯科主题 {prompt} . 充满活力、迷幻、复古70年代风格、闪亮的迪斯科球、霓虹灯光、舞池、高度详细",
+        "c_prompt": "迪斯科主题 {c_prompt} . 充满活力、迷幻、复古70年代风格、闪亮的迪斯科球、霓虹灯光、舞池、高度详细",
+        "negative_prompt": "极简、乡村、单色、现代、简约",
+        "c_negative_prompt": "极简、乡村、单色、现代、简约"
+    },
+    {
+        "name": "misc-dreamscape",
+        "c_name": "杂项-梦境",
+        "prompt": "梦境 {prompt} . 超现实、飘渺、梦幻、神秘、幻想、高度详细",
+        "c_prompt": "梦境 {c_prompt} . 超现实、飘渺、梦幻、神秘、幻想、高度详细",
+        "negative_prompt": "写实、具体、普通、平凡",
+        "c_negative_prompt": "写实、具体、普通、平凡"
+    },
+    {
+        "name": "misc-dystopian",
+        "c_name": "杂项-末日",
+        "prompt": "末日风格 {prompt} . 荒凉、末日后世界、阴郁、戏剧性、高度详细",
+        "c_prompt": "末日风格 {c_prompt} . 荒凉、末日后世界、阴郁、戏剧性、高度详细",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、愉快、乐观、充满活力、多彩",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、愉快、乐观、充满活力、多彩"
+    },
+    {
+        "name": "misc-fairy tale",
+        "c_name": "杂项-童话故事",
+        "prompt": "童话故事 {prompt} . 魔幻、奇幻、迷人、童话书风格、高度详细",
+        "c_prompt": "童话故事 {c_prompt} . 魔幻、奇幻、迷人、童话书风格、高度详细",
+        "negative_prompt": "写实、现代、普通、平凡",
+        "c_negative_prompt": "写实、现代、普通、平凡"
+    },
+    {
+        "name": "misc-gothic",
+        "c_name": "杂项-哥特风",
+        "prompt": "哥特风格 {prompt} . 黑暗、神秘、令人不安、戏剧性、华丽、详细",
+        "c_prompt": "哥特风格 {c_prompt} . 黑暗、神秘、令人不安、戏剧性、华丽、详细",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、愉快、乐观",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、逼真、愉快、乐观"
+    },
+    {
+        "name": "misc-grunge",
+        "c_name": "杂项-朋克",
+        "prompt": "朋克风格 {prompt} . 纹理、破旧、复古、朋克摇滚氛围、肮脏、嘈杂",
+        "c_prompt": "朋克风格 {c_prompt} . 纹理、破旧、复古、朋克摇滚氛围、肮脏、嘈杂",
+        "negative_prompt": "光滑、干净、极简、时尚、现代、逼真",
+        "c_negative_prompt": "光滑、干净、极简、时尚、现代、逼真"
+    },
+    {
+        "name": "misc-horror",
+        "c_name": "杂项-恐怖",
+        "prompt": "恐怖主题 {prompt} . 古怪、令人不安、黑暗、诡异、悬疑、严肃、高度详细",
+        "c_prompt": "恐怖主题 {c_prompt} . 古怪、令人不安、黑暗、诡异、悬疑、严肃、高度详细",
+        "negative_prompt": "愉快、明亮、充满活力、轻松、可爱",
+        "c_negative_prompt": "愉快、明亮、充满活力、轻松、可爱"
+    },
+    {
+        "name": "misc-kawaii",
+        "c_name": "杂项-可爱",
+        "prompt": "可爱风格 {prompt} . 可爱、迷人的色彩、明亮、欢快、动漫影响、高度详细",
+        "c_prompt": "可爱风格 {c_prompt} . 可爱、迷人的色彩、明亮、欢快、动漫影响、高度详细",
+        "negative_prompt": "黑暗、可怕、写实、单色、抽象",
+        "c_negative_prompt": "黑暗、可怕、写实、单色、抽象"
+    },
+    {
+        "name": "misc-lovecraftian",
+        "c_name": "杂项-Lovecraft恐怖",
+        "prompt": "Lovecraft恐怖 {prompt} . 基督神秘、宇宙恐怖、未知、神秘、超现实、高度详细",
+        "c_prompt": "Lovecraft恐怖 {c_prompt} . 基督神秘、宇宙恐怖、未知、神秘、超现实、高度详细",
+        "negative_prompt": "轻松、普通、熟悉、简单、写实",
+        "c_negative_prompt": "轻松、普通、熟悉、简单、写实"
+    },
+    {
+        "name": "misc-macabre",
+        "c_name": "杂项-恐怖",
+        "prompt": "恐怖风格 {prompt} . 黑暗、哥特、阴森、恐怖、高度详细",
+        "c_prompt": "恐怖风格 {c_prompt} . 黑暗、哥特、阴森、恐怖、高度详细",
+        "negative_prompt": "明亮、愉快、轻松、卡通、可爱",
+        "c_negative_prompt": "明亮、愉快、轻松、卡通、可爱"
     }
 ]
