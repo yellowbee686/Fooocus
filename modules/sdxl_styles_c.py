@@ -599,5 +599,856 @@ styles = [
         "c_prompt": "恐怖风格 {c_prompt} . 黑暗、哥特、阴森、恐怖、高度详细",
         "negative_prompt": "明亮、愉快、轻松、卡通、可爱",
         "c_negative_prompt": "明亮、愉快、轻松、卡通、可爱"
+    },
+    {
+        "name": "misc-manga",
+        "c_name": "杂项-漫画",
+        "prompt": "漫画风格 {prompt} . 生动、高能、详细、标志性、日本漫画风格",
+        "c_prompt": "漫画风格 {c_prompt} . 生动、高能、详细、标志性、日本漫画风格",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真、西方漫画风格",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真、西方漫画风格"
+    },
+    {
+        "name": "misc-metropolis",
+        "c_name": "杂项-大都市",
+        "prompt": "大都市主题 {prompt} . 城市、城市风光、摩天大楼、现代、未来感、高度详细",
+        "c_prompt": "大都市主题 {c_prompt} . 城市、城市风光、摩天大楼、现代、未来感、高度详细",
+        "negative_prompt": "乡村、自然、乡村、历史、简单",
+        "c_negative_prompt": "乡村、自然、乡村、历史、简单"
+    },
+    {
+        "name": "misc-minimalist",
+        "c_name": "杂项-极简主义",
+        "prompt": "极简主义风格 {prompt} . 简单、清洁、简约、现代、优雅",
+        "c_prompt": "极简主义风格 {c_prompt} . 简单、清洁、简约、现代、优雅",
+        "negative_prompt": "华丽、复杂、高度详细、杂乱、无序、凌乱、嘈杂",
+        "c_negative_prompt": "华丽、复杂、高度详细、杂乱、无序、凌乱、嘈杂"
+    },
+    {
+        "name": "misc-monochrome",
+        "c_name": "杂项-单色",
+        "prompt": "单色 {prompt} . 黑白、对比、色调、纹理、详细",
+        "c_prompt": "单色 {c_prompt} . 黑白、对比、色调、纹理、详细",
+        "negative_prompt": "多彩、生动、嘈杂、模糊、畸形",
+        "c_negative_prompt": "多彩、生动、嘈杂、模糊、畸形"
+    },
+    {
+        "name": "misc-nautical",
+        "c_name": "杂项-航海",
+        "prompt": "航海主题 {prompt} . 海洋、海洋、船只、海事、海滩、海洋生物、高度详细",
+        "c_prompt": "航海主题 {c_prompt} . 海洋、海洋、船只、海事、海滩、海洋生物、高度详细",
+        "negative_prompt": "内陆、沙漠、山脉、城市、乡村",
+        "c_negative_prompt": "内陆、沙漠、山脉、城市、乡村"
+    },
+    {
+        "name": "misc-space",
+        "c_name": "杂项-太空",
+        "prompt": "太空主题 {prompt} . 宇宙、星球、星系、星云、行星、科幻、高度详细",
+        "c_prompt": "太空主题 {c_prompt} . 宇宙、星球、星系、星云、行星、科幻、高度详细",
+        "negative_prompt": "地球、世俗、地面、写实",
+        "c_negative_prompt": "地球、世俗、地面、写实"
+    },
+    {
+        "name": "misc-stained glass",
+        "c_name": "杂项-彩色玻璃",
+        "prompt": "彩色玻璃风格 {prompt} . 生动、美丽、半透明、复杂、详细",
+        "c_prompt": "彩色玻璃风格 {c_prompt} . 生动、美丽、半透明、复杂、详细",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真"
+    },
+    {
+        "name": "misc-techwear fashion",
+        "c_name": "杂项-科技服装时尚",
+        "prompt": "科技服装时尚 {prompt} . 未来感、赛博朋克、城市、战术、时尚、黑暗、高度详细",
+        "c_prompt": "科技服装时尚 {c_prompt} . 未来感、赛博朋克、城市、战术、时尚、黑暗、高度详细",
+        "negative_prompt": "复古、乡村、多彩、低对比度、写实、素描、水彩",
+        "c_negative_prompt": "复古、乡村、多彩、低对比度、写实、素描、水彩"
+    },
+    {
+        "name": "misc-tribal",
+        "c_name": "杂项-部落",
+        "prompt": "部落风格 {prompt} . 土著、民族、传统图案、大胆、自然色彩、高度详细",
+        "c_prompt": "部落风格 {c_prompt} . 土著、民族、传统图案、大胆、自然色彩、高度详细",
+        "negative_prompt": "现代、未来感、极简主义、淡色调",
+        "c_negative_prompt": "现代、未来感、极简主义、淡色调"
+    },
+    {
+        "name": "misc-zentangle",
+        "c_name": "杂项-Zentangle",
+        "prompt": "Zentangle {prompt} . 复杂、抽象、单色、图案、冥想、高度详细",
+        "c_prompt": "Zentangle {c_prompt} . 复杂、抽象、单色、图案、冥想、高度详细",
+        "negative_prompt": "多彩、代表性、简单、大面积色块",
+        "c_negative_prompt": "多彩、代表性、简单、大面积色块"
+    },
+    {
+        "name": "papercraft-collage",
+        "c_name": "剪贴画",
+        "prompt": "剪贴画风格 {prompt} . 多媒体、分层、质感、详细、艺术性",
+        "c_prompt": "剪贴画风格 {c_prompt} . 多媒体、分层、质感、详细、艺术性",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真"
+    },
+    {
+        "name": "papercraft-flat papercut",
+        "c_name": "剪纸风格",
+        "prompt": "平面剪纸风格 {prompt} . 剪影、干净的切割、纸张、锐利的边缘、极简主义、色块",
+        "c_prompt": "平面剪纸风格 {c_prompt} . 剪影、干净的切割、纸张、锐利的边缘、极简主义、色块",
+        "negative_prompt": "3D、高度详细、噪音、粗糙、模糊、绘画、绘图、照片、畸形",
+        "c_negative_prompt": "3D、高度详细、噪音、粗糙、模糊、绘画、绘图、照片、畸形"
+    },
+    {
+        "name": "papercraft-kirigami",
+        "c_name": "剪纸剪纸风格",
+        "prompt": "剪纸剪纸风格 {prompt} . 3D、纸张折叠、纸张切割、日本、复杂、对称、精确、干净的线条",
+        "c_prompt": "剪纸剪纸风格 {c_prompt} . 3D、纸张折叠、纸张切割、日本、复杂、对称、精确、干净的线条",
+        "negative_prompt": "绘画、绘图、2D、噪音、模糊、畸形",
+        "c_negative_prompt": "绘画、绘图、2D、噪音、模糊、畸形"
+    },
+    {
+        "name": "papercraft-paper mache",
+        "c_name": "纸浆纸雕",
+        "prompt": "纸浆纸雕 {prompt} . 3D、雕塑、质感、手工制作、生动、有趣",
+        "c_prompt": "纸浆纸雕 {c_prompt} . 3D、雕塑、质感、手工制作、生动、有趣",
+        "negative_prompt": "2D、平面、照片、素描、数字艺术、畸形、噪音、模糊",
+        "c_negative_prompt": "2D、平面、照片、素描、数字艺术、畸形、噪音、模糊"
+    },
+    {
+        "name": "papercraft-paper quilling",
+        "c_name": "纸卷艺术",
+        "prompt": "纸卷艺术 {prompt} . 复杂、精致、卷曲、滚动、成型、盘绕、回卷、3D、立体、装饰性",
+        "c_prompt": "纸卷艺术 {c_prompt} . 复杂、精致、卷曲、滚动、成型、盘绕、回卷、3D、立体、装饰性",
+        "negative_prompt": "照片、绘画、绘图、2D、平面、畸形、噪音、模糊",
+        "c_negative_prompt": "照片、绘画、绘图、2D、平面、畸形、噪音、模糊"
+    },
+    {
+        "name": "papercraft-papercut collage",
+        "c_name": "剪纸拼贴",
+        "prompt": "剪纸拼贴 {prompt} . 多媒体、质感纸张、重叠、不对称、抽象、生动",
+        "c_prompt": "剪纸拼贴 {c_prompt} . 多媒体、质感纸张、重叠、不对称、抽象、生动",
+        "negative_prompt": "照片、3D、写实、绘画、绘图、高度详细、畸形",
+        "c_negative_prompt": "照片、3D、写实、绘画、绘图、高度详细、畸形"
+    },
+    {
+        "name": "papercraft-papercut shadow box",
+        "c_name": "剪纸影箱",
+        "prompt": "3D剪纸影箱 {prompt} . 分层、立体、深度、剪影、影子、剪纸、手工制作、高对比度",
+        "c_prompt": "3D剪纸影箱 {c_prompt} . 分层、立体、深度、剪影、影子、剪纸、手工制作、高对比度",
+        "negative_prompt": "绘画、绘图、照片、2D、平面、高度详细、模糊、噪音、畸形",
+        "c_negative_prompt": "绘画、绘图、照片、2D、平面、高度详细、模糊、噪音、畸形"
+    },
+    {
+        "name": "papercraft-stacked papercut",
+        "c_name": "叠加剪纸艺术",
+        "prompt": "叠加剪纸艺术 {prompt} . 3D、分层、立体、深度、精确切割、叠加层次、剪纸、高对比度",
+        "c_prompt": "叠加剪纸艺术 {c_prompt} . 3D、分层、立体、深度、精确切割、叠加层次、剪纸、高对比度",
+        "negative_prompt": "2D、平面、噪音、模糊、绘画、绘图、照片、畸形",
+        "c_negative_prompt": "2D、平面、噪音、模糊、绘画、绘图、照片、畸形"
+    },
+    {
+        "name": "papercraft-thick layered papercut",
+        "c_name": "厚层剪纸艺术",
+        "prompt": "厚层剪纸艺术 {prompt} . 深度3D、体积感、立体、深度、厚纸张、高叠层、浓密质感、有触感的层次",
+        "c_prompt": "厚层剪纸艺术 {c_prompt} . 深度3D、体积感、立体、深度、厚纸张、高叠层、浓密质感、有触感的层次",
+        "negative_prompt": "2D、平面、薄纸张、低叠层、光滑质感、绘画、绘图、照片、畸形",
+        "c_negative_prompt": "2D、平面、薄纸张、低叠层、光滑质感、绘画、绘图、照片、畸形"
+    },
+    {
+        "name": "photo-alien",
+        "c_name": "照片-外星人",
+        "prompt": "外星人主题 {prompt} . 外星生物、宇宙、异世界、神秘、科幻、高度详细",
+        "c_prompt": "外星人主题 {c_prompt} . 外星生物、宇宙、异世界、神秘、科幻、高度详细",
+        "negative_prompt": "地球、世俗、普通、写实、简单",
+        "c_negative_prompt": "地球、世俗、普通、写实、简单"
+    },
+    {
+        "name": "photo-film noir",
+        "c_name": "电影黑色照片",
+        "prompt": "电影黑色风格 {prompt} . 单色、高对比度、戏剧性阴影、1940年代风格、神秘、电影感",
+        "c_prompt": "电影黑色风格 {c_prompt} . 单色、高对比度、戏剧性阴影、1940年代风格、神秘、电影感",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真、充满活力、多彩",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真、充满活力、多彩"
+    },
+    {
+        "name": "photo-hdr",
+        "c_name": "HDR照片",
+        "prompt": "HDR照片 {prompt} . 高动态范围、生动、丰富的细节、清晰的阴影和高光、写实、强烈、增强对比度、高度详细",
+        "c_prompt": "HDR照片 {c_prompt} . 高动态范围、生动、丰富的细节、清晰的阴影和高光、写实、强烈、增强对比度、高度详细",
+        "negative_prompt": "平淡、低对比度、过度饱和、曝光不足、曝光过度、模糊、嘈杂",
+        "c_negative_prompt": "平淡、低对比度、过度饱和、曝光不足、曝光过度、模糊、嘈杂"
+    },
+    {
+        "name": "photo-long exposure",
+        "c_name": "长曝光照片",
+        "prompt": "长曝光照片 {prompt} . 运动模糊、光线条纹、超现实、梦幻、幽灵效果、高度详细",
+        "c_prompt": "长曝光照片 {c_prompt} . 运动模糊、光线条纹、超现实、梦幻、幽灵效果、高度详细",
+        "negative_prompt": "静态、嘈杂、畸形、抖动、突兀、平淡、低对比度",
+        "c_negative_prompt": "静态、嘈杂、畸形、抖动、突兀、平淡、低对比度"
+    },
+    {
+        "name": "photo-neon noir",
+        "c_name": "霓虹黑色照片",
+        "prompt": "霓虹黑色 {prompt} . 赛博朋克、黑暗、雨夜街头、霓虹灯、高对比度、昏暗、充满活力、高度详细",
+        "c_prompt": "霓虹黑色 {c_prompt} . 赛博朋克、黑暗、雨夜街头、霓虹灯、高对比度、昏暗、充满活力、高度详细",
+        "negative_prompt": "明亮、阳光明媚、白天、低对比度、黑白、素描、水彩",
+        "c_negative_prompt": "明亮、阳光明媚、白天、低对比度、黑白、素描、水彩"
+    },
+    {
+        "name": "photo-silhouette",
+        "c_name": "剪影照片",
+        "prompt": "剪影风格 {prompt} . 高对比度、极简主义、黑白、鲜明、戏剧性",
+        "c_prompt": "剪影风格 {c_prompt} . 高对比度、极简主义、黑白、鲜明、戏剧性",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、色彩、写实、照片逼真",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、色彩、写实、照片逼真"
+    },
+    {
+        "name": "photo-tilt-shift",
+        "c_name": "移轴照片",
+        "prompt": "移轴照片 {prompt} . 选择性聚焦、微型效果、模糊背景、高度详细、生动、透视控制",
+        "c_prompt": "移轴照片 {c_prompt} . 选择性聚焦、微型效果、模糊背景、高度详细、生动、透视控制",
+        "negative_prompt": "模糊、嘈杂、畸形、平淡、低对比度、不真实、过度饱和、曝光不足",
+        "c_negative_prompt": "模糊、嘈杂、畸形、平淡、低对比度、不真实、过度饱和、曝光不足"
+    },
+    {
+        "name": "cinematic-diva",
+        "c_name": "电影巨星",
+        "prompt": "UHD、8K、超高清、电影级摄影作品 {prompt}、精美的光线、出色的构图",
+        "c_prompt": "UHD、8K、超高清、电影级摄影作品 {c_prompt}、精美的光线、出色的构图",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、不适宜工作场所",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、不适宜工作场所"
+    },
+    {
+        "name": "Abstract Expressionism",
+        "c_name": "抽象表现主义",
+        "prompt": "抽象表现主义艺术 {prompt}、高对比度、极简主义、多彩、鲜明、戏剧性、表现主义",
+        "c_prompt": "抽象表现主义艺术 {c_prompt}、高对比度、极简主义、多彩、鲜明、戏剧性、表现主义",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实、照片逼真"
+    },
+    {
+        "name": "Academia",
+        "c_name": "学院派",
+        "prompt": "学院派、{prompt}、高雅的常春藤风格、鲜明、戏剧性、时尚的寄宿学校、学院派",
+        "c_prompt": "学院派、{c_prompt}、高雅的常春藤风格、鲜明、戏剧性、时尚的寄宿学校、学院派",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、颓废、邋遢、不整洁",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、颓废、邋遢、不整洁"
+    },
+    {
+        "name": "Action Figure",
+        "c_name": "动作人物模型",
+        "prompt": "动作人物模型、{prompt}、塑料可收藏动作人物、可收藏的玩具动作人物",
+        "c_prompt": "动作人物模型、{c_prompt}、塑料可收藏动作人物、可收藏的玩具动作人物",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Adorable 3D Character",
+        "c_name": "可爱的3D角色",
+        "prompt": "可爱的3D角色、{prompt}、3D渲染、可爱的角色、3D艺术",
+        "c_prompt": "可爱的3D角色、{c_prompt}、3D渲染、可爱的角色、3D艺术",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、颓废、邋遢、摄影、照片、写实",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、颓废、邋遢、摄影、照片、写实"
+    },
+    {
+        "name": "Adorable Kawaii",
+        "c_name": "可爱卡哇伊",
+        "prompt": "可爱卡哇伊、{prompt}、漂亮、可爱、卡哇伊",
+        "c_prompt": "可爱卡哇伊、{c_prompt}、漂亮、可爱、卡哇伊",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、哥特、黑暗、情绪低落、单色",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、哥特、黑暗、情绪低落、单色"
+    },
+    {
+        "name": "Art Deco",
+        "c_name": "装饰艺术",
+        "prompt": "装饰艺术、{prompt}、流线型、几何形式、装饰艺术风格",
+        "c_prompt": "装饰艺术、{c_prompt}、流线型、几何形式、装饰艺术风格",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Art Nouveau",
+        "c_name": "新艺术",
+        "prompt": "新艺术、美丽的艺术、{prompt}、流线型、有机形式、长、优美、新艺术风格",
+        "c_prompt": "新艺术、美丽的艺术、{c_prompt}、流线型、有机形式、长、优美、新艺术风格",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、工业、机械",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、工业、机械"
+    },
+    {
+        "name": "Astral Aura",
+        "c_name": "星光氛围",
+        "prompt": "星光氛围、{prompt}、星光、丰富多彩的光环、充满活力的能量",
+        "c_prompt": "星光氛围、{c_prompt}、星光、丰富多彩的光环、充满活力的能量",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Avant-garde",
+        "c_name": "先锋艺术",
+        "prompt": "先锋艺术、{prompt}、不寻常、实验性、先锋艺术",
+        "c_prompt": "先锋艺术、{c_prompt}、不寻常、实验性、先锋艺术",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Baroque",
+        "c_name": "巴洛克",
+        "prompt": "巴洛克艺术、{prompt}、戏剧性、奢华、宏伟、巴洛克艺术",
+        "c_prompt": "巴洛克艺术、{c_prompt}、戏剧性、奢华、宏伟、巴洛克艺术",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Bauhaus-Style Poster",
+        "c_name": "包豪斯风格海报",
+        "prompt": "包豪斯风格海报、{prompt}、简单的几何形状、干净的线条、基本色彩、包豪斯风格海报",
+        "c_prompt": "包豪斯风格海报、{c_prompt}、简单的几何形状、干净的线条、基本色彩、包豪斯风格海报",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Blueprint Schematic Drawing",
+        "c_name": "蓝图示意图绘制",
+        "prompt": "蓝图示意图绘制、{prompt}、技术绘图、蓝图、示意图",
+        "c_prompt": "蓝图示意图绘制、{c_prompt}、技术绘图、蓝图、示意图",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度"
+    },
+    {
+        "name": "Caricature",
+        "c_name": "漫画画像",
+        "prompt": "漫画画像、{prompt}、夸张、滑稽、漫画画像",
+        "c_prompt": "漫画画像、{c_prompt}、夸张、滑稽、漫画画像",
+        "negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实",
+        "c_negative_prompt": "丑陋、畸形、嘈杂、模糊、低对比度、写实"
+    },
+    {
+        "name": "Cel Shaded Art",
+        "c_name": "线条描边艺术",
+        "prompt": "线条描边艺术，{prompt}，2D，扁平色彩，卡通渲染，线条描边风格",
+        "c_prompt": "线条描边艺术，{c_prompt}，2D，扁平色彩，卡通渲染，线条描边风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Character Design Sheet",
+        "c_name": "角色设计表",
+        "prompt": "角色设计表，{prompt}，角色参考表，角色旋转图",
+        "c_prompt": "角色设计表，{c_prompt}，角色参考表，角色旋转图",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Classicism Art",
+        "c_name": "古典主义艺术",
+        "prompt": "古典主义艺术，{prompt}，灵感来自罗马和希腊文化，清晰，和谐，古典主义艺术",
+        "c_prompt": "古典主义艺术，{c_prompt}，灵感来自罗马和希腊文化，清晰，和谐，古典主义艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Color Field Painting",
+        "c_name": "色块绘画",
+        "prompt": "色块绘画，{prompt}，抽象，简单，几何形状，色块绘画风格",
+        "c_prompt": "色块绘画，{c_prompt}，抽象，简单，几何形状，色块绘画风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Colored Pencil Art",
+        "c_name": "彩色铅笔艺术",
+        "prompt": "彩色铅笔艺术，{prompt}，彩色铅笔笔触，浅色，可见纸张纹理，彩色铅笔艺术",
+        "c_prompt": "彩色铅笔艺术，{c_prompt}，彩色铅笔笔触，浅色，可见纸张纹理，彩色铅笔艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Conceptual Art",
+        "c_name": "概念艺术",
+        "prompt": "概念艺术，{prompt}，概念艺术",
+        "c_prompt": "概念艺术，{c_prompt}，概念艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Constructivism",
+        "c_name": "构成主义艺术",
+        "prompt": "构成主义艺术，{prompt}，极简主义，几何形状，构成主义艺术",
+        "c_prompt": "构成主义艺术，{c_prompt}，极简主义，几何形状，构成主义艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Cubism",
+        "c_name": "立体派艺术",
+        "prompt": "立体派艺术，{prompt}，扁平的几何形状，立体派艺术",
+        "c_prompt": "立体派艺术，{c_prompt}，扁平的几何形状，立体派艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Dadaism",
+        "c_name": "达达主义艺术",
+        "prompt": "达达主义艺术，{prompt}，讽刺，荒谬，达达主义艺术",
+        "c_prompt": "达达主义艺术，{c_prompt}，讽刺，荒谬，达达主义艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Dark Fantasy",
+        "c_name": "黑暗幻想艺术",
+        "prompt": "黑暗幻想艺术，{prompt}，黑暗，阴郁，黑暗幻想风格",
+        "c_prompt": "黑暗幻想艺术，{c_prompt}，黑暗，阴郁，黑暗幻想风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，明亮，晴朗",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，明亮，晴朗"
+    },
+    {
+        "name": "Dark Moody Atmosphere",
+        "c_name": "黑暗沉郁氛围",
+        "prompt": "黑暗沉郁氛围，{prompt}，戏剧性，神秘，黑暗沉郁氛围",
+        "c_prompt": "黑暗沉郁氛围，{c_prompt}，戏剧性，神秘，黑暗沉郁氛围",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，充满活力，多彩，明亮",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，充满活力，多彩，明亮"
+    },
+    {
+        "name": "DMT Art Style",
+        "c_name": "DMT艺术风格",
+        "prompt": "DMT艺术风格，{prompt}，明亮的颜色，超现实的视觉效果，盘旋的图案，DMT艺术风格",
+        "c_prompt": "DMT艺术风格，{c_prompt}，明亮的颜色，超现实的视觉效果，盘旋的图案，DMT艺术风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Doodle Art",
+        "c_name": "涂鸦艺术风格",
+        "prompt": "涂鸦艺术风格，{prompt}，绘画，自由流畅，盘旋的图案，涂鸦艺术风格",
+        "c_prompt": "涂鸦艺术风格，{c_prompt}，绘画，自由流畅，盘旋的图案，涂鸦艺术风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Double Exposure",
+        "c_name": "双重曝光风格",
+        "prompt": "双重曝光风格，{prompt}，双图像幽灵效应，图像组合，双重曝光风格",
+        "c_prompt": "双重曝光风格，{c_prompt}，双图像幽灵效应，图像组合，双重曝光风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Dripping Paint Splatter Art",
+        "c_name": "滴溅涂漆风格艺术",
+        "prompt": "滴溅涂漆风格艺术，{prompt}，戏剧性，颜料滴落，飞溅，滴溅涂漆",
+        "c_prompt": "滴溅涂漆风格艺术，{c_prompt}，戏剧性，颜料滴落，飞溅，滴溅涂漆",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Expressionism",
+        "c_name": "表现主义艺术风格",
+        "prompt": "表现主义艺术风格，{prompt}，动感，对比，情感，夸张的形式，表现主义艺术风格",
+        "c_prompt": "表现主义艺术风格，{c_prompt}，动感，对比，情感，夸张的形式，表现主义艺术风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Faded Polaroid Photo",
+        "c_name": "褪色的宝丽来照片",
+        "prompt": "褪色的宝丽来照片，{prompt}，模拟，老旧褪色照片，老宝丽来",
+        "c_prompt": "褪色的宝丽来照片，{c_prompt}，模拟，老旧褪色照片，老宝丽来",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，充满活力，多彩",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，充满活力，多彩"
+    },
+    {
+        "name": "Fauvism",
+        "c_name": "野兽派艺术风格",
+        "prompt": "野兽派艺术，{prompt}，绘画感，大胆的颜色，有质感的笔触，野兽派艺术",
+        "c_prompt": "野兽派艺术，{c_prompt}，绘画感，大胆的颜色，有质感的笔触，野兽派艺术",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Flat 2D Art",
+        "c_name": "扁平2D艺术风格",
+        "prompt": "扁平2D艺术风格，{prompt}，简单的扁平色彩，二维，扁平2D艺术风格",
+        "c_prompt": "扁平2D艺术风格，{c_prompt}，简单的扁平色彩，二维，扁平2D艺术风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，三维，照片，写实",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，三维，照片，写实"
+    },
+    {
+        "name": "Fortnite Art Style",
+        "c_name": "堡垒之夜艺术风格",
+        "prompt": "堡垒之夜艺术风格，{prompt}，三维卡通，多彩，堡垒之夜艺术风格",
+        "c_prompt": "堡垒之夜艺术风格，{c_prompt}，三维卡通，多彩，堡垒之夜艺术风格",
+        "negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，照片，写实",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，照片，写实"
+    },
+    {
+        "name": "Futurism",
+        "c_name": "未来主义",
+        "prompt": "Futurism Art Style, {prompt}, dynamic, dramatic, Futurism Art Style",
+        "c_prompt": "未来主义艺术风格，{prompt}，充满活力，戏剧性，未来主义艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Glitchcore",
+        "c_name": "故障核心",
+        "prompt": "Glitchcore Art Style, {prompt}, dynamic, dramatic, distorted, vibrant colors, glitchcore art style",
+        "c_prompt": "故障核心艺术风格，{prompt}，充满活力，戏剧性，扭曲，充满活力的颜色，故障核心艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Glo-fi",
+        "c_name": "Glo-fi",
+        "prompt": "Glo-fi Art Style, {prompt}, dynamic, dramatic, vibrant colors, glo-fi art style",
+        "c_prompt": "Glo-fi艺术风格，{prompt}，充满活力，戏剧性，充满活力的颜色，Glo-fi艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Googie Art Style",
+        "c_name": "Googie艺术风格",
+        "prompt": "Googie Art Style, {prompt}, dynamic, dramatic, 1950's futurism, bold boomerang angles, Googie art style",
+        "c_prompt": "Googie艺术风格，{prompt}，充满活力，戏剧性，1950年代未来主义，大胆的回旋镖角度，Googie艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Graffiti Art",
+        "c_name": "涂鸦艺术",
+        "prompt": "Graffiti Art Style, {prompt}, dynamic, dramatic, vibrant colors, graffiti art style",
+        "c_prompt": "涂鸦艺术风格，{prompt}，充满活力，戏剧性，充满活力的颜色，涂鸦艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Harlem Renaissance Art",
+        "c_name": "哈莱姆文艺复兴艺术",
+        "prompt": "Harlem Renaissance Art Style, {prompt}, dynamic, dramatic, 1920s African American culture, Harlem Renaissance art style",
+        "c_prompt": "哈莱姆文艺复兴艺术风格，{prompt}，充满活力，戏剧性，1920年代的非洲美国文化，哈莱姆文艺复兴艺术风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "High Fashion",
+        "c_name": "高级时尚",
+        "prompt": "High Fashion, {prompt}, dynamic, dramatic, haute couture, elegant, ornate clothing, High Fashion",
+        "c_prompt": "高级时尚，{prompt}，充满活力，戏剧性，高级定制，优雅，华丽的服装，高级时尚",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Idyllic",
+        "c_name": "田园风光",
+        "prompt": "Idyllic, {prompt}, peaceful, happy, pleasant, happy, harmonious, picturesque, charming",
+        "c_prompt": "田园风光，{prompt}，宁静，快乐，愉快，幸福，和谐，如画，迷人",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Impressionism",
+        "c_name": "印象派",
+        "prompt": "Impressionism, {prompt}, painterly, small brushstrokes, visible brushstrokes, impressionistic style",
+        "c_prompt": "印象派，{prompt}，画家般的，小画笔笔触，可见的笔触，印象派风格",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Infographic Drawing",
+        "c_name": "信息图绘画",
+        "prompt": "Infographic Drawing, {prompt}, diagram, infographic",
+        "c_prompt": "信息图绘画，{prompt}，图表，信息图",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Ink Dripping Drawing",
+        "c_name": "墨水滴画",
+        "prompt": "Ink Dripping Drawing, {prompt}, ink drawing, dripping ink",
+        "c_prompt": "墨水滴画，{prompt}，墨水画，滴墨",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, colorful, vibrant",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，多彩，充满活力"
+    },
+    {
+        "name": "Japanese Ink Drawing",
+        "c_name": "日本水墨画",
+        "prompt": "Japanese Ink Drawing, {prompt}, ink drawing, inkwash, Japanese Ink Drawing",
+        "c_prompt": "日本水墨画，{prompt}，墨水画，水墨画，日本水墨画",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, colorful, vibrant",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，多彩，充满活力"
+    },
+    {
+        "name": "Knolling Photography",
+        "c_name": "整理摄影",
+        "prompt": "Knolling Photography, {prompt}, flat lay photography, object arrangment, knolling photography",
+        "c_prompt": "整理摄影，{prompt}，平面摆放摄影，物品排列，整理摄影",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Light Cheery Atmosphere",
+        "c_name": "轻快愉悦氛围",
+        "prompt": "Light Cheery Atmosphere, {prompt}, happy, joyful, cheerful, carefree, gleeful, lighthearted, pleasant atmosphere",
+        "c_prompt": "轻快愉悦氛围，{prompt}，快乐，欢乐，愉快，无忧无虑，欣喜若狂，轻松愉快，愉悦的氛围",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, monochromatic, dark, moody",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，单色，黑暗，阴郁"
+    },
+    {
+        "name": "Logo Design",
+        "c_name": "标志设计",
+        "prompt": "Logo Design, {prompt}, dynamic graphic art, vector art, minimalist, professional logo design",
+        "c_prompt": "标志设计，{prompt}，动态图形艺术，矢量艺术，极简，专业标志设计",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Luxurious Elegance",
+        "c_name": "豪华优雅",
+        "prompt": "Luxurious Elegance, {prompt}, extravagant, ornate, designer, opulent, picturesque, lavish",
+        "c_prompt": "豪华优雅，{prompt}，奢华，华丽，设计师，富丽堂皇，如画，奢侈",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Macro Photography",
+        "c_name": "微距摄影",
+        "prompt": "Macro Photography, {prompt}, close-up, macro 100mm, macro photography",
+        "c_prompt": "微距摄影，{prompt}，特写，微距100mm，微距摄影",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Mandola Art",
+        "c_prompt": "马克笔绘画，{prompt}，粗体马克笔线条，可见的纸质纹理，马克笔绘画",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photograph, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，摄影，逼真"
+    },
+    {
+        "name": "Medievalism",
+        "c_name": "中世纪主义",
+        "prompt": "Medievalism, {prompt}, inspired by The Middle Ages, medieval art, elaborate patterns and decoration, Medievalism",
+        "c_prompt": "中世纪主义，{prompt}，受中世纪启发，中世纪艺术，精细的图案和装饰，中世纪主义"
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },   "c_name": "曼陀罗艺术",
+        "prompt": "Mandola art style, {prompt}, complex, circular design, mandola",
+        "c_prompt": "曼陀罗艺术风格，{prompt}，复杂，圆形设计，曼陀罗",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Marker Drawing",
+        "c_name": "马克笔绘画",
+        "prompt": "Marker Drawing, {prompt}, bold marker lines, visibile paper texture, marker drawing",
+        "c_prompt": "马克笔绘画，{prompt}，粗体马克笔线条，可见的纸质纹理，马克笔绘画",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photograph, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，摄影，逼真"
+    },
+    {
+        "name": "Medievalism",
+        "c_name": "中世纪主义",
+        "prompt": "Medievalism, {prompt}, inspired by The Middle Ages, medieval art, elaborate patterns and decoration, Medievalism",
+        "c_prompt": "中世纪主义，{prompt}，受中世纪启发，中世纪艺术，精细的图案和装饰，中世纪主义"
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Minimalism",
+        "c_name": "极简主义",
+        "prompt": "Minimalism, {prompt}, abstract, simple geometric shapes, hard edges, sleek contours, Minimalism",
+        "c_prompt": "极简主义，{prompt}，抽象，简单的几何形状，锐利的边缘，流畅的轮廓，极简主义",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Neo-Baroque",
+        "c_name": "新巴洛克",
+        "prompt": "Neo-Baroque, {prompt}, ornate and elaborate, dynamic, Neo-Baroque",
+        "c_prompt": "新巴洛克，{prompt}，华丽而精细，充满活力，新巴洛克",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Neo-Byzantine",
+        "c_name": "新拜占庭",
+        "prompt": "Neo-Byzantine, {prompt}, grand decorative religious style, Orthodox Christian inspired, Neo-Byzantine",
+        "c_prompt": "新拜占庭，{prompt}，宏伟的宗教装饰风格，受到东正教基督教的启发，新拜占庭",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Neo-Futurism",
+        "c_name": "新未来主义",
+        "prompt": "Neo-Futurism, {prompt}, high-tech, curves, spirals, flowing lines, idealistic future, Neo-Futurism",
+        "c_prompt": "新未来主义，{prompt}，高科技，曲线，螺旋，流畅线条，理想主义未来，新未来主义",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Neo-Impressionism",
+        "c_name": "新印象派",
+        "prompt": "Neo-Impressionism, {prompt}, tiny dabs of color, Pointillism, painterly, Neo-Impressionism",
+        "c_prompt": "新印象派，{prompt}，微小的色点，点彩派，画家般的，新印象派",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photograph, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，摄影，逼真"
+    },
+    {
+        "name": "Neo-Rococo",
+        "c_name": "新洛可可",
+        "prompt": "Neo-Rococo, {prompt}, curved forms, naturalistic ornamentation, elaborate, decorative, gaudy, Neo-Rococo",
+        "c_prompt": "新洛可可，{prompt}，弯曲的形式，自然主义的装饰，精细的，装饰的，俗艳的，新洛可可",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Neoclassicism",
+        "c_name": "新古典主义",
+        "prompt": "Neoclassicism, {prompt}, ancient Rome and Greece inspired, idealic, sober colors, Neoclassicism",
+        "c_prompt": "新古典主义，{prompt}，受古罗马和古希腊启发，理想主义，素净的颜色，新古典主义",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Op Art",
+        "c_name": "视错觉艺术",
+        "prompt": "Op Art, {prompt}, optical illusion, abstract, geometric pattern, impression of movement, Op Art",
+        "c_prompt": "视错觉艺术，{prompt}，光学错觉，抽象，几何图案，运动的印象，视错觉艺术",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Ornate and Intricate",
+        "c_name": "华丽和复杂",
+        "prompt": "Ornate and Intricate, {prompt}, decorative, highly detailed, elaborate, ornate, intricate",
+        "c_prompt": "华丽和复杂，{prompt}，装饰性的，高度详细，精致的，华丽的，复杂的",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Pencil Sketch Drawing",
+        "c_name": "铅笔素描绘画",
+        "prompt": "Pencil Sketch Drawing, {prompt}, black and white drawing, graphite drawing",
+        "c_prompt": "铅笔素描绘画，{prompt}，黑白绘画，石墨绘画",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Pop Art 2",
+        "c_name": "波普艺术",
+        "prompt": "Pop Art, {prompt}, vivid colors, flat color, 2D, strong lines, Pop Art",
+        "c_prompt": "波普艺术，{prompt}，鲜艳的颜色，扁平颜色，二维，粗线条，波普艺术",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photo, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，照片，逼真"
+    },
+    {
+        "name": "Rococo",
+        "c_name": "洛可可",
+        "prompt": "Rococo, {prompt}, flamboyant, pastel colors, curved lines, elaborate detail, Rococo",
+        "c_prompt": "洛可可，{prompt}，华丽的，粉色调，弯曲线条，精细的细节，洛可可",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Silhouette Art",
+        "c_name": "剪影艺术",
+        "prompt": "Silhouette Art, {prompt}, high contrast, well-defined, Silhouette Art",
+        "c_prompt": "剪影艺术，{prompt}，高对比度，清晰定义，剪影艺术",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Simple Vector Art",
+        "c_name": "简单矢量艺术",
+        "prompt": "Simple Vector Art, {prompt}, 2D flat, simple shapes, minimalistic, professional graphic, flat color, high contrast, Simple Vector Art",
+        "c_prompt": "简单矢量艺术，{prompt}，二维扁平，简单的形状，极简主义，专业图形，扁平颜色，高对比度，简单矢量艺术",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, 3D, photo, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，三维，照片，逼真"
+    },
+    {
+        "name": "Sketchup",
+        "c_name": "SketchUp",
+        "prompt": "Sketchup, {prompt}, CAD, professional design, Sketchup",
+        "c_prompt": "SketchUp，{prompt}，CAD，专业设计，SketchUp",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photo, photograph",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，照片，摄影"
+    },
+    {
+        "name": "Steampunk 2",
+        "c_name": "蒸汽朋克",
+        "prompt": "Steampunk, {prompt}, retrofuturistic science fantasy, steam-powered tech, vintage industry, gears, neo-victorian, steampunk",
+        "c_prompt": "蒸汽朋克，{prompt}，复古未来科幻，蒸汽动力技术，复古工业，齿轮，新维多利亚风格，蒸汽朋克",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Surrealism",
+        "c_name": "超现实主义",
+        "prompt": "Surrealism, {prompt}, expressive, dramatic, organic lines and forms, dreamlike and mysterious, Surrealism",
+        "c_prompt": "超现实主义，{prompt}，富有表现力，戏剧性，有机线条和形式，如梦幻般而神秘，超现实主义",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，逼真"
+    },
+    {
+        "name": "Suprematism",
+        "c_name": "超级主义",
+        "prompt": "Suprematism, {prompt}, abstract, limited color palette, geometric forms, Suprematism",
+        "c_prompt": "超级主义，{prompt}，抽象，有限的色彩调色板，几何形式，超级主义",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，逼真"
+    },
+    {
+        "name": "Terragen",
+        "c_name": "Terragen",
+        "prompt": "Terragen, {prompt}, beautiful massive landscape, epic scenery, Terragen",
+        "c_prompt": "Terragen，{prompt}，美丽的广阔景观，史诗般的风景，Terragen",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Tranquil Relaxing Atmosphere",
+        "c_name": "宁静轻松氛围",
+        "prompt": "Tranquil Relaxing Atmosphere, {prompt}, calming style, soothing colors, peaceful, idealic, Tranquil Relaxing Atmosphere",
+        "c_prompt": "宁静轻松氛围，{prompt}，宁静的风格，舒缓的颜色，和平的，理想的，宁静轻松氛围",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, oversaturated",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，过度饱和"
+    },
+    {
+        "name": "Sticker Designs",
+        "c_name": "贴纸设计",
+        "prompt": "Vector Art Stickers, {prompt}, professional vector design, sticker designs, Sticker Sheet",
+        "c_prompt": "矢量艺术贴纸，{prompt}，专业的矢量设计，贴纸设计，贴纸表",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Vibrant Rim Light",
+        "c_name": "光晕亮边",
+        "prompt": "Vibrant Rim Light, {prompt}, bright rim light, high contrast, bold edge light",
+        "c_prompt": "光晕亮边，{prompt}，明亮的边缘光，高对比度，大胆的边缘光",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Volumetric Lighting",
+        "c_name": "体积光照",
+        "prompt": "Volumetric Lighting, {prompt}, light depth, dramatic atmospheric lighting, Volumetric Lighting",
+        "c_prompt": "体积光照，{prompt}，光线深度，戏剧性的大气照明，体积光照",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度"
+    },
+    {
+        "name": "Watercolor 2",
+        "c_name": "水彩画",
+        "prompt": "Watercolor style painting, {prompt}, visible paper texture, color wash, watercolor",
+        "c_prompt": "水彩画风格绘画，{prompt}，可见的纸张质地，色彩冲洗，水彩画",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, photo, realistic",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，照片，逼真"
+    },
+    {
+        "name": "Whimsical and Playful",
+        "c_name": "奇趣而活泼",
+        "prompt": "Whimsical and Playful, {prompt}, imaginative, fantastical, bright colors, stylized, happy, Whimsical and Playful",
+        "c_prompt": "奇趣而活泼，{prompt}，富有想象力，奇幻的，明亮的颜色，风格化的，快乐的，奇趣而活泼",
+        "negative_prompt": "ugly, deformed, noisy, blurry, low contrast, drab, boring, moody",
+        "c_negative_prompt": "丑陋，畸形，嘈杂，模糊，低对比度，单调，无聊，情绪低落"
     }
 ]
