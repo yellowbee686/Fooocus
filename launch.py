@@ -12,6 +12,7 @@ from modules.path import modelfile_path, lorafile_path, vae_approx_path, fooocus
 
 REINSTALL_ALL = False
 
+
 def prepare_environment():
     torch_index_url = os.environ.get('TORCH_INDEX_URL', "https://download.pytorch.org/whl/cu118")
     torch_command = os.environ.get('TORCH_COMMAND',
@@ -21,7 +22,7 @@ def prepare_environment():
     xformers_package = os.environ.get('XFORMERS_PACKAGE', 'xformers==0.0.20')
 
     comfy_repo = os.environ.get('COMFY_REPO', "https://github.com/comfyanonymous/ComfyUI")
-    comfy_commit_hash = os.environ.get('COMFY_COMMIT_HASH', "2bc12d3d22efb5c63ae3a7fc342bb2dd16b31735")
+    comfy_commit_hash = os.environ.get('COMFY_COMMIT_HASH', "1c5d6663faf1a33e00ec67240167b174a9cac655")
 
     print(f"Python {sys.version}")
     print(f"Fooocus version: {fooocus_version.version}")
@@ -33,23 +34,6 @@ def prepare_environment():
     if REINSTALL_ALL or not is_installed("torch") or not is_installed("torchvision"):
         run(f'"{python}" -m {torch_command}', "Installing torch and torchvision", "Couldn't install torch", live=True)
 
-    import torch 
-
-    def detect_gpu_type():
-        if torch.cuda.is_available():
-            gpu_name = torch.cuda.get_device_name(0)  
-            if "NVIDIA" in gpu_name:
-                return "NVIDIA GPU"
-            elif "Radeon" in gpu_name:
-                return "AMD GPU"
-            else:
-                return "Unknown GPU Type"
-        else:
-            return "No GPU Available"
-
-    gpu_type = detect_gpu_type()
-    print("Detected GPU Type:", gpu_type)
-
     if REINSTALL_ALL or not is_installed("xformers"):
         if platform.system() == "Windows":
             if platform.python_version().startswith("3.10"):
@@ -60,7 +44,7 @@ def prepare_environment():
                     "You can also check this and build manually: https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers#building-xformers-on-windows-by-duckness")
                 if not is_installed("xformers"):
                     exit(0)
-        elif platform.system() == "Linux" and gpu_type == 'NVIDIA GPU':
+        elif platform.system() == "Linux":
             run_pip(f"install -U -I --no-deps {xformers_package}", "xformers")
 
     if REINSTALL_ALL or not requirements_met(requirements_file):
@@ -112,22 +96,20 @@ def download_models():
     return
 
 
-def clear_comfy_args():
+def ini_comfy_args():
     argv = sys.argv
     sys.argv = [sys.argv[0]]
+
     from comfy.cli_args import args as comfy_args
     comfy_args.disable_cuda_malloc = True
+    comfy_args.auto_launch = False
+
     sys.argv = argv
-
-
-def cuda_malloc():
-    import cuda_malloc
 
 
 prepare_environment()
 
-clear_comfy_args()
-# cuda_malloc()
+ini_comfy_args()
 
 download_models()
 

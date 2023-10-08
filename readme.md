@@ -34,6 +34,7 @@ In the first time you launch the software, it will automatically download models
 
 1. It will download [sd_xl_base_1.0_0.9vae.safetensors from here](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0_0.9vae.safetensors) as the file "Fooocus\models\checkpoints\sd_xl_base_1.0_0.9vae.safetensors".
 2. It will download [sd_xl_refiner_1.0_0.9vae.safetensors from here](https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0_0.9vae.safetensors) as the file "Fooocus\models\checkpoints\sd_xl_refiner_1.0_0.9vae.safetensors".
+3. Note that if you use inpaint, at the first time you inpaint an image, it will download [Fooocus's own inpaint control model from here](https://huggingface.co/lllyasviel/fooocus_inpaint/resolve/main/inpaint.fooocus.patch) as the file "Fooocus\models\inpaint\inpaint.fooocus.patch" (the size of this file is 1.28GB).
 
 ![image](https://github.com/lllyasviel/Fooocus/assets/19834515/d386f817-4bd7-490c-ad89-c1e228c23447)
 
@@ -66,7 +67,9 @@ Please open an issue if you use similar devices but still cannot achieve accepta
 
 | Colab | Info
 | --- | --- |
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lllyasviel/Fooocus/blob/main/colab.ipynb) | Fooocus Colab (Official Version)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lllyasviel/Fooocus/blob/colab/colab.ipynb) | Fooocus Colab Version
+
+Note that this link is optimized for Google Colab - the codes may be different from offline Fooocus for better Colab experience.
 
 Thanks to [camenduru](https://github.com/camenduru)!
 
@@ -128,7 +131,7 @@ Or if you want to open a remote port, use
 
 ### Linux (AMD GPUs)
 
-Installation is the same as Linux part. It has been tested for 6700XT. Works for both Pytorch 1.13 and Pytorch 2. 
+Coming soon ...
 
 ### Mac/Windows(AMD GPUs)
 
@@ -152,6 +155,11 @@ Below things are already inside the software, and **users do not need to do anyt
 11. A carefully designed system for balancing multiple styles as well as prompt expansion.
 12. Using automatic1111's method to normalize prompt emphasizing. This significantly improve results when users directly copy prompts from civitai.
 13. The joint swap system of refiner now also support img2img and upscale in a seamless way.
+14. CFG Scale and TSNR correction (tuned for SDXL) when CFG is bigger than 10.
+
+## Changing Model Path
+
+After the first time you run Fooocus, a config file will be generated at `Fooocus\user_path_config.txt`. This file can be edited for changing the model path.
 
 ## Advanced Features
 
