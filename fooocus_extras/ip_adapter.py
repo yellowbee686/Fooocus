@@ -1,16 +1,12 @@
 import torch
-import comfy.clip_vision
+import fcbh.clip_vision
 import safetensors.torch as sf
-import comfy.model_management as model_management
+import fcbh.model_management as model_management
 import contextlib
+import fcbh.ldm.modules.attention as attention
 
 from fooocus_extras.resampler import Resampler
-from comfy.model_patcher import ModelPatcher
-
-
-if model_management.xformers_enabled():
-    import xformers
-    import xformers.ops
+from fcbh.model_patcher import ModelPatcher
 
 
 SD_V12_CHANNELS = [320] * 4 + [640] * 4 + [1280] * 4 + [1280] * 6 + [640] * 6 + [320] * 6 + [1280] * 2
@@ -18,32 +14,7 @@ SD_XL_CHANNELS = [640] * 8 + [1280] * 40 + [1280] * 60 + [640] * 12 + [1280] * 2
 
 
 def sdp(q, k, v, extra_options):
-    if model_management.xformers_enabled():
-        b, _, _ = q.shape
-        q, k, v = map(
-            lambda t: t.unsqueeze(3)
-            .reshape(b, t.shape[1], extra_options["n_heads"], extra_options["dim_head"])
-            .permute(0, 2, 1, 3)
-            .reshape(b * extra_options["n_heads"], t.shape[1], extra_options["dim_head"])
-            .contiguous(),
-            (q, k, v),
-        )
-        out = xformers.ops.memory_efficient_attention(q, k, v, attn_bias=None, op=None)
-        out = (
-            out.unsqueeze(0)
-            .reshape(b, extra_options["n_heads"], out.shape[1], extra_options["dim_head"])
-            .permute(0, 2, 1, 3)
-            .reshape(b, out.shape[1], extra_options["n_heads"] * extra_options["dim_head"])
-        )
-    else:
-        b, _, _ = q.shape
-        q, k, v = map(
-            lambda t: t.view(b, -1, extra_options["n_heads"], extra_options["dim_head"]).transpose(1, 2),
-            (q, k, v),
-        )
-        out = torch.nn.functional.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=0.0, is_causal=False)
-        out = out.transpose(1, 2).reshape(b, -1, extra_options["n_heads"] * extra_options["dim_head"])
-    return out
+    return attention.optimized_attention(q, k, v, heads=extra_options["n_heads"], mask=None)
 
 
 class ImageProjModel(torch.nn.Module):
@@ -110,15 +81,16 @@ class IPAdapterModel(torch.nn.Module):
         self.ip_layers.load_state_dict_ordered(state_dict["ip_adapter"])
 
 
-clip_vision: comfy.clip_vision.ClipVisionModel = None
+clip_vision: fcbh.clip_vision.ClipVisionModel = None
 ip_negative: torch.Tensor = None
 image_proj_model: ModelPatcher = None
 ip_layers: ModelPatcher = None
 ip_adapter: IPAdapterModel = None
+ip_unconds = None
 
 
 def load_ip_adapter(clip_vision_path, ip_negative_path, ip_adapter_path):
-    global clip_vision, image_proj_model, ip_layers, ip_negative, ip_adapter
+    global clip_vision, image_proj_model, ip_layers, ip_negative, ip_adapter, ip_unconds
 
     if clip_vision_path is None:
         return
@@ -130,7 +102,7 @@ def load_ip_adapter(clip_vision_path, ip_negative_path, ip_adapter_path):
         return
 
     ip_negative = sf.load_file(ip_negative_path)['data']
-    clip_vision = comfy.clip_vision.load(clip_vision_path)
+    clip_vision = fcbh.clip_vision.load(clip_vision_path)
 
     load_device = model_management.get_torch_device()
     offload_device = torch.device('cpu')
@@ -168,14 +140,17 @@ def load_ip_adapter(clip_vision_path, ip_negative_path, ip_adapter_path):
     ip_layers = ModelPatcher(model=ip_adapter.ip_layers, load_device=load_device,
                              offload_device=offload_device)
 
+    ip_unconds = None
     return
 
 
 @torch.no_grad()
 @torch.inference_mode()
 def preprocess(img):
+    global ip_unconds
+
     inputs = clip_vision.processor(images=img, return_tensors="pt")
-    comfy.model_management.load_models_gpu([clip_vision.patcher, image_proj_model])
+    fcbh.model_management.load_model_gpu(clip_vision.patcher)
     pixel_values = inputs['pixel_values'].to(clip_vision.load_device)
 
     if clip_vision.dtype != torch.float32:
@@ -183,7 +158,7 @@ def preprocess(img):
     else:
         precision_scope = lambda a, b: contextlib.nullcontext(a)
 
-    with precision_scope(comfy.model_management.get_autocast_device(clip_vision.load_device), torch.float32):
+    with precision_scope(fcbh.model_management.get_autocast_device(clip_vision.load_device), torch.float32):
         outputs = clip_vision.model(pixel_values=pixel_values, output_hidden_states=True)
 
     if ip_adapter.plus:
@@ -191,24 +166,25 @@ def preprocess(img):
     else:
         cond = outputs.image_embeds.to(ip_adapter.dtype)
 
-    outputs = image_proj_model.model(cond)
+    fcbh.model_management.load_model_gpu(image_proj_model)
+    cond = image_proj_model.model(cond).to(device=ip_adapter.load_device, dtype=ip_adapter.dtype)
 
-    return outputs
+    fcbh.model_management.load_model_gpu(ip_layers)
+
+    if ip_unconds is None:
+        uncond = ip_negative.to(device=ip_adapter.load_device, dtype=ip_adapter.dtype)
+        ip_unconds = [m(uncond).cpu() for m in ip_layers.model.to_kvs]
+
+    ip_conds = [m(cond).cpu() for m in ip_layers.model.to_kvs]
+    return ip_conds
 
 
 @torch.no_grad()
 @torch.inference_mode()
-def patch_model(model, ip_tasks):
+def patch_model(model, tasks):
     new_model = model.clone()
 
-    tasks = []
-    for cn_img, cn_stop, cn_weight in ip_tasks:
-        tasks.append((cn_img, cn_stop, cn_weight, {}))
-
     def make_attn_patcher(ip_index):
-        ip_model_k = ip_layers.model.to_kvs[ip_index * 2]
-        ip_model_v = ip_layers.model.to_kvs[ip_index * 2 + 1]
-
         def patcher(n, context_attn2, value_attn2, extra_options):
             org_dtype = n.dtype
             current_step = float(model.model.diffusion_model.current_step.detach().cpu().numpy()[0])
@@ -219,44 +195,34 @@ def patch_model(model, ip_tasks):
                 k = [context_attn2]
                 v = [value_attn2]
                 b, _, _ = q.shape
-                batch_prompt = b // len(cond_or_uncond)
 
-                for cn_img, cn_stop, cn_weight, cache in tasks:
+                for ip_conds, cn_stop, cn_weight in tasks:
                     if current_step < cn_stop:
-                        if ip_index in cache:
-                            ip_k, ip_v = cache[ip_index]
-                        else:
-                            ip_model_k.to(device=ip_adapter.load_device, dtype=ip_adapter.dtype)
-                            ip_model_v.to(device=ip_adapter.load_device, dtype=ip_adapter.dtype)
-                            cond = cn_img.to(device=ip_adapter.load_device, dtype=ip_adapter.dtype).repeat(batch_prompt, 1, 1)
-                            uncond = ip_negative.to(device=ip_adapter.load_device, dtype=ip_adapter.dtype).repeat(batch_prompt, 1, 1)
-                            uncond_cond = torch.cat([(cond, uncond)[i] for i in cond_or_uncond], dim=0)
-                            ip_k = ip_model_k(uncond_cond)
-                            ip_v = ip_model_v(uncond_cond)
+                        ip_k_c = ip_conds[ip_index * 2].to(q)
+                        ip_v_c = ip_conds[ip_index * 2 + 1].to(q)
+                        ip_k_uc = ip_unconds[ip_index * 2].to(q)
+                        ip_v_uc = ip_unconds[ip_index * 2 + 1].to(q)
 
-                            # Midjourney's attention formulation of image prompt (non-official reimplementation)
-                            # Written by Lvmin Zhang at Stanford University, 2023 Dec
-                            # For non-commercial use only - if you use this in commercial project then
-                            # probably it has some intellectual property issues.
-                            # Contact lvminzhang@acm.org if you are not sure.
+                        ip_k = torch.cat([(ip_k_c, ip_k_uc)[i] for i in cond_or_uncond], dim=0)
+                        ip_v = torch.cat([(ip_v_c, ip_v_uc)[i] for i in cond_or_uncond], dim=0)
 
-                            # Below is the sensitive part with potential intellectual property issues.
+                        # Midjourney's attention formulation of image prompt (non-official reimplementation)
+                        # Written by Lvmin Zhang at Stanford University, 2023 Dec
+                        # For non-commercial use only - if you use this in commercial project then
+                        # probably it has some intellectual property issues.
+                        # Contact lvminzhang@acm.org if you are not sure.
 
-                            ip_v_mean = torch.mean(ip_v, dim=1, keepdim=True)
-                            ip_v_offset = ip_v - ip_v_mean
+                        # Below is the sensitive part with potential intellectual property issues.
 
-                            B, F, C = ip_k.shape
-                            channel_penalty = float(C) / 1280.0
-                            weight = cn_weight * channel_penalty
+                        ip_v_mean = torch.mean(ip_v, dim=1, keepdim=True)
+                        ip_v_offset = ip_v - ip_v_mean
 
-                            ip_k = ip_k * weight
-                            ip_v = ip_v_offset + ip_v_mean * weight
+                        B, F, C = ip_k.shape
+                        channel_penalty = float(C) / 1280.0
+                        weight = cn_weight * channel_penalty
 
-                            # The sensitive part ends here.
-
-                            cache[ip_index] = ip_k, ip_v
-                            ip_model_k.to(device=ip_adapter.offload_device, dtype=ip_adapter.dtype)
-                            ip_model_v.to(device=ip_adapter.offload_device, dtype=ip_adapter.dtype)
+                        ip_k = ip_k * weight
+                        ip_v = ip_v_offset + ip_v_mean * weight
 
                         k.append(ip_k)
                         v.append(ip_v)

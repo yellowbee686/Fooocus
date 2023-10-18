@@ -1,10 +1,10 @@
 import torch
 
-import comfy.model_management as model_management
+import fcbh.model_management as model_management
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, set_seed
 from modules.path import fooocus_expansion_path
-from comfy.model_patcher import ModelPatcher
+from fcbh.model_patcher import ModelPatcher
 
 
 fooocus_magic_split = [
@@ -50,6 +50,10 @@ class FooocusExpansion:
         print(f'Fooocus Expansion engine loaded for {load_device}, use_fp16 = {use_fp16}.')
 
     def __call__(self, prompt, seed):
+        if self.patcher.current_device != self.patcher.load_device:
+            print('Fooocus Expansion loaded by itself.')
+            model_management.load_model_gpu(self.patcher)
+
         seed = int(seed)
         set_seed(seed)
         origin = safe_str(prompt)
