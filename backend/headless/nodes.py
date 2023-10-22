@@ -584,7 +584,8 @@ class VAELoader:
     #TODO: scale factor?
     def load_vae(self, vae_name):
         vae_path = folder_paths.get_full_path("vae", vae_name)
-        vae = fcbh.sd.VAE(ckpt_path=vae_path)
+        sd = fcbh.utils.load_torch_file(vae_path)
+        vae = fcbh.sd.VAE(sd=sd)
         return (vae,)
 
 class ControlNetLoader:
@@ -1795,7 +1796,8 @@ def init_custom_nodes():
         "nodes_clip_sdxl.py",
         "nodes_canny.py",
         "nodes_freelunch.py",
-        "nodes_custom_sampler.py"
+        "nodes_custom_sampler.py",
+        "nodes_hypertile.py",
     ]
 
     for node_file in extras_files:
